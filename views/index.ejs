@@ -1,0 +1,48 @@
+<%- include("header") -%>
+
+  <%- include("nav") -%>
+    <div class="mid-part">
+      <div class="article">
+        <h1 style="font-family:Tahoma">
+          Welcome to our YouTube to MP3 Conversion Webapp!</h1><br>
+        <p>
+          Convert YouTube videos to high-quality MP3 files for offline listening with just a few clicks. Our webapp is free, user-friendly, and optimized for all devices. Say goodbye to limited internet access and expensive music streaming services. Enjoy unlimited music anytime, anywhere with our easy-to-use conversion solution. Start converting today!</p><br><p>
+            <em>Note: Our YouTube to MP3 Conversion Webapp is for videos up to 10 minutes only. Videos over this length cannot be converted. Use responsibly and only convert videos you have rights to. Thank you.</em>
+          </p>
+    </div>
+    <div class="box_convert">
+      <div class="form">
+        <form action="/download-mp3" method="post" class="vedio_sub">
+          <div>
+            <input class="text" type="text" name="videoID" placeholder="Video Id">
+            <div>
+              <button type="submit" name="convert">Convert</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="message_part">
+
+        <% if(typeof success != "undefined" && success) { %>
+
+          <div class="success">
+
+            <p> <b>Song Title:</b> <%= song_title %></p><br>
+
+            <a href="<%= song_link %> "><button id="dwn_btn">Download</button></a>
+
+          </div>
+
+        <% } else if(typeof success != "undefined" && !success) { %>
+          <div class="errors">
+            <p> <%= message %> </p>
+          </div>
+          
+        <% } %>  
+      </div>
+    </div>
+  </div>
+  
+
+<%- include("footer") -%>
