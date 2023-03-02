@@ -132,7 +132,13 @@ button{
   top: -35px;
   left: 225px;
   cursor:pointer;
+  background-color: #999;
 }
+
+button:hover{
+  background-color: #eee;
+}
+
 
 
 
