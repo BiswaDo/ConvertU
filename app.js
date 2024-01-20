@@ -56,8 +56,8 @@ app.post("/download-mp3", async function (req, res) {
 
             response.on("end", () => {
                 const fetchResponce = JSON.parse(data);
-                res.write("<h1>Song name :"+fetchResponce.title+"</h1>");
-                res.write("<h2>Click here to download:- <a href='"+fetchResponce.link+"'>Download</a></h2>");
+                res.write(<h1>Song name :"+fetchResponce.title+"</h1>);
+                res.write(<h2>Click here to download:- <a href='"+fetchResponce.link+"'>Download</a></h2>);
                 res.send();
             });
         });
