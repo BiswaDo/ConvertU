@@ -1,2 +1,0 @@
-api_key = 16417112a5msh87ab6ce37bb2bedp160471jsn5c04d3b857f3
-api_host = youtube-mp36.p.rapidapi.com

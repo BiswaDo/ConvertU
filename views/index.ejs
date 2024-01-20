@@ -21,26 +21,6 @@
           </div>
         </form>
       </div>
-      
-      <div class="message_part">
-
-        <% if(typeof success != "undefined" && success) { %>
-
-          <div class="success">
-
-            <p> <b>Song Title:</b> <%= song_title %></p><br>
-
-            <a href="<%= song_link %> "><button id="dwn_btn">Download</button></a>
-
-          </div>
-
-        <% } else if(typeof success != "undefined" && !success) { %>
-          <div class="errors">
-            <p> <%= message %> </p>
-          </div>
-          
-        <% } %>  
-      </div>
     </div>
   </div>
   
