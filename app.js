@@ -1,6 +1,6 @@
 const express = require("express");
-const https = require("https");  // Use the 'https' module instead of 'node-fetch'
-const { URL } = require("url");  // Require the 'URL' module for constructing the URL
+const https = require("https"); 
+const { URL } = require("url");  
 require("dotenv").config();
 
 const app = express();
@@ -33,7 +33,7 @@ app.post("/download-mp3", async function (req, res) {
     const video = req.body.videoID;
     
     if (!video) {
-        return res.render("index", { success: false, message: "Please enter the valid video id." });
+        return res.render("index", { success: false, message: "Please enter the valid video url." });
     } else {
         // Construct the URL using the 'URL' module
         const apiUrl = new URL(`https://youtube-mp3-downloader2.p.rapidapi.com/ytmp3/ytmp3/?url=${video}`);
